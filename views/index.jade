@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  - var userID = 201120937
+  form(class='testInput' action='/inputTest/' + userID method='post')
+      input(class='name' name='userName')
+      input(class='id' name='userID')
+      button send
